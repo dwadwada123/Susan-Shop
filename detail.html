@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm | Susan Shop</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">SUSAN<span>SHOP</span>.</a>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="shop.html" class="nav-link">Sản phẩm</a>
+                <a href="about.html" class="nav-link">Về chúng tôi</a>
+                <a href="contact.html" class="nav-link">Liên hệ</a>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="icon-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge">0</span>
+                </a>
+                <a href="login.html" class="btn-primary">Đăng nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container detail-container" id="product-detail-container">
+        <div class="product-gallery">
+            <div class="main-img">
+                <img id="detail-img" src="" alt="">
+            </div>
+        </div>
+
+        <div class="product-details">
+            <span class="detail-cate" id="detail-category"></span>
+            <h1 id="detail-name">Đang tải...</h1>
+            <div class="detail-price" id="detail-price"></div>
+            <p class="desc" id="detail-desc"></p>
+
+            <div class="actions">
+                <div class="quantity-box">
+                    <button class="qty-btn" id="btn-minus"><i class="fa-solid fa-minus"></i></button>
+                    <input type="number" value="1" min="1" class="qty-input-new" id="qty-input" readonly>
+                    <button class="qty-btn" id="btn-plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                
+                <button class="btn-primary btn-lg" id="btn-add-cart">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="meta">
+                <p><strong>Mã SP:</strong> <span id="detail-id"></span></p>
+                <p><strong>Tình trạng:</strong> Còn hàng</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Susan Shop. Assignment JavaScript Advanced.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/detail.js"></script>
+
+</body>
+
+</html>

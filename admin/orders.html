@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý đơn hàng | Susan Shop</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<>
+
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <a href="dashboard.html" class="logo">SUSAN<span>ADMIN</span></a>
+        </div>
+        <nav class="menu">
+            <a href="dashboard.html" class="menu-item"><i class="fa-solid fa-chart-line"></i> Tổng quan</a>
+            <a href="products.html" class="menu-item"><i class="fa-solid fa-box"></i> Sản phẩm</a>
+            <a href="categories.html" class="menu-item"><i class="fa-solid fa-list"></i> Danh mục</a>
+            <a href="orders.html" class="menu-item active"><i class="fa-solid fa-shopping-cart"></i> Đơn hàng</a>
+            <a href="customers.html" class="menu-item"><i class="fa-solid fa-users"></i> Khách hàng</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../login.html" class="btn-logout" onclick="logout(event)"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+        </div>
+    </aside>
+
+    <main class="admin-main">
+        <div class="table-container">
+            <div class="table-header">
+                <h2>Danh sách đơn hàng</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã đơn</th>
+                        <th>Khách hàng</th>
+                        <th>Ngày đặt</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="order-table-body">
+                    </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div class="modal" id="order-modal">
+        <div class="modal-content" style="width: 600px;">
+            <div class="modal-header">
+                <h3>Chi tiết đơn hàng <span id="modal-order-id"></span></h3>
+                <button class="close-modal" onclick="closeOrderModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="modal-body" style="margin-bottom: 20px;">
+                <p><strong>Khách hàng:</strong> <span id="detail-customer"></span></p>
+                <p><strong>Số điện thoại:</strong> <span id="detail-phone"></span></p>
+                <p><strong>Địa chỉ:</strong> <span id="detail-address"></span></p>
+                <p><strong>Ghi chú:</strong> <span id="detail-note" style="font-style: italic;"></span></p>
+                <hr style="border: 0; border-top: 1px solid var(--border); margin: 15px 0;">
+                
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th style="padding: 5px;">Sản phẩm</th>
+                            <th style="padding: 5px;">SL</th>
+                            <th style="padding: 5px;">Đơn giá</th>
+                        </tr>
+                    </thead>
+                    <tbody id="order-items-body">
+                        </tbody>
+                </table>
+                
+                <div style="text-align: right; margin-top: 15px; font-size: 18px; font-weight: bold; color: var(--accent);">
+                    Tổng cộng: <span id="detail-total"></span>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" onclick="closeOrderModal()">Đóng</button>
+                <button type="button" class="btn-primary" id="btn-complete-order">Xác nhận đã giao</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin-common.js"></script>
+    <script src="../assets/js/admin-orders.js"></script>
+
+</body>
+
+</html>

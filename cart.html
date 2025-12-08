@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng | Susan Shop</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">SUSAN<span>SHOP</span>.</a>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="shop.html" class="nav-link">Sản phẩm</a>
+                <a href="about.html" class="nav-link">Về chúng tôi</a>
+                <a href="contact.html" class="nav-link">Liên hệ</a>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="icon-btn active">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge">0</span>
+                </a>
+                <a href="login.html" class="btn-primary">Đăng nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container cart-page">
+        <h1>Giỏ hàng của bạn</h1>
+
+        <div class="cart-layout">
+            <div class="cart-table-container">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Tạm tính</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-body">
+                    </tbody>
+                </table>
+                <p id="empty-cart-msg" style="display:none; text-align:center; margin-top:20px;">Giỏ hàng trống.</p>
+            </div>
+
+            <div class="cart-summary">
+                <h3>Cộng giỏ hàng</h3>
+                <div class="summary-row">
+                    <span>Tạm tính</span>
+                    <span id="subtotal-price">0đ</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Tổng cộng</span>
+                    <span class="total-price" id="total-price">0đ</span>
+                </div>
+                <a href="checkout.html" class="btn-primary btn-block" id="btn-checkout">Tiến hành thanh toán</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+
+</html>

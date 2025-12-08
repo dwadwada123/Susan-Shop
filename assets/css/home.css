@@ -1,0 +1,39 @@
+/* HERO SECTION */
+.hero {
+    padding: 160px 0 100px;
+    text-align: center;
+    background: radial-gradient(circle at top, #1e293b 0%, var(--bg-body) 70%);
+}
+
+.subtitle {
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin: 20px 0;
+    font-weight: 800;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, var(--accent), #34d399);
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

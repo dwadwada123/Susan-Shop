@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm | Susan Shop</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/shop.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">SUSAN<span>SHOP</span>.</a>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="shop.html" class="nav-link">Sản phẩm</a>
+                <a href="about.html" class="nav-link">Về chúng tôi</a>
+                <a href="contact.html" class="nav-link">Liên hệ</a>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="icon-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge">0</span>
+                </a>
+                <a href="login.html" class="btn-primary">Đăng nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Tất cả sản phẩm</h1>
+            <p>Trang bị tận răng - Chiến game cực căng</p>
+        </div>
+    </section>
+
+    <section class="section shop-section">
+        <div class="container shop-container">
+
+            <aside class="sidebar">
+                <div class="filter-group">
+                    <h3>Danh mục</h3>
+                    <ul class="filter-list" id="category-list">
+                        <li><a href="#" class="active" onclick="filterByCategory(event, 'all')">Tất cả</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Khoảng giá</h3>
+                    <div class="price-range">
+                        <input type="range" id="price-range" min="0" max="100000000" step="500000" value="100000000">
+                        <div class="price-label">
+                            <span>0đ</span>
+                            <span id="price-value">100.000.000đ</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="shop-content">
+                <div class="shop-sort">
+                    <p>Hiển thị danh sách sản phẩm</p>
+                    <select class="sort-select">
+                        <option>Mới nhất</option>
+                        <option>Giá tăng dần</option>
+                        <option>Giá giảm dần</option>
+                    </select>
+                </div>
+
+                <div class="product-grid" id="shop-products">
+                    <p>Đang tải dữ liệu...</p>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Susan Shop. Assignment JavaScript Advanced.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/shop.js"></script>
+</body>
+
+</html>

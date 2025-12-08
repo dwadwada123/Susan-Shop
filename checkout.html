@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán | Susan Shop</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container checkout-page">
+        <h1>Thanh toán</h1>
+
+        <form class="checkout-layout" id="checkout-form">
+            <div class="billing-info">
+                <h3>Thông tin giao hàng</h3>
+                <div class="form-group">
+                    <label>Họ và tên</label>
+                    <input type="text" id="bill-name" placeholder="Nhập họ tên của bạn" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="bill-email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Số điện thoại</label>
+                        <input type="text" id="bill-phone" placeholder="Số điện thoại" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Địa chỉ nhận hàng</label>
+                    <input type="text" id="bill-address" placeholder="Số nhà, tên đường..." required>
+                </div>
+                <div class="form-group">
+                    <label>Ghi chú (Tùy chọn)</label>
+                    <textarea rows="3" id="bill-note" placeholder="Ghi chú về đơn hàng..."></textarea>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3>Đơn hàng của bạn</h3>
+                <div class="order-items" id="order-items-list">
+                    </div>
+                <div class="order-total-row">
+                    <span>Tổng cộng</span>
+                    <span class="final-price" id="order-total">0đ</span>
+                </div>
+
+                <div class="payment-method">
+                    <label><input type="radio" name="payment" value="cod" checked> Thanh toán khi nhận hàng (COD)</label>
+                    <label><input type="radio" name="payment" value="banking"> Chuyển khoản ngân hàng</label>
+                </div>
+
+                <button type="submit" class="btn-primary btn-block">Đặt hàng ngay</button>
+                <a href="cart.html" class="back-link">Quay lại giỏ hàng</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/checkout.js"></script>
+</body>
+
+</html>

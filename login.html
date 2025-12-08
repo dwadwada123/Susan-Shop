@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập | Susan Shop</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="index.html" class="logo">SUSAN<span>SHOP</span>.</a>
+                <h2>Chào mừng trở lại!</h2>
+                <p>Đăng nhập để tiếp tục mua sắm</p>
+            </div>
+
+            <form class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="login-email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" id="login-pass" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-actions">
+                    <label><input type="checkbox" id="remember-me"> Ghi nhớ tôi</label>
+                    <a href="#" class="forgot-link">Quên mật khẩu?</a>
+                </div>
+
+                <button type="submit" class="btn-primary btn-full">Đăng nhập</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>
