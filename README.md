@@ -23,40 +23,74 @@ Dự án được tổ chức theo mô hình tách biệt (Separation of Concern
 
 
 SUSAN-SHOP/
+
 │
+
 ├── admin/                  # Giao diện trang quản trị (Admin)
+
 │   ├── dashboard.html      # Thống kê tổng quan
+
 │   ├── products.html       # Quản lý sản phẩm
+
 │   ├── categories.html     # Quản lý danh mục
+
 │   ├── orders.html         # Quản lý đơn hàng
+
 │   └── customers.html      # Quản lý khách hàng
+
 │
+
 ├── assets/                 # Tài nguyên tĩnh
+
 │   ├── css/                # Stylesheet (Tách file riêng cho từng trang)
+
 │   │   ├── admin.css       # CSS chung cho Admin
+
 │   │   ├── style.css       # CSS chung cho Client
+
 │   │   ├── shop.css
+
 │   │   └── ...
+
 │   │
+
 │   ├── js/                 # Javascript Logic (Tách module hóa)
+
 │   │   ├── common.js       # Config chung (API URL, Fetch, Format tiền)
+
 │   │   ├── admin-common.js # Logic bảo vệ và xử lý chung cho Admin
+
 │   │   ├── admin-products.js
+
 │   │   ├── admin-orders.js
+
 │   │   ├── home.js
+
 │   │   ├── cart.js
+
 │   │   └── ...
+
 │   │
+
 │   └── images/             # Hình ảnh dự án
+
 │
 ├── db.json                 # Cơ sở dữ liệu (JSON Server)
+
 ├── index.html              # Trang chủ
+
 ├── shop.html               # Trang cửa hàng
+
 ├── detail.html             # Trang chi tiết sản phẩm
+
 ├── cart.html               # Trang giỏ hàng
+
 ├── checkout.html           # Trang thanh toán
+
 ├── login.html              # Trang đăng nhập
+
 ├── register.html           # Trang đăng ký
+
 └── README.md               # Tài liệu hướng dẫn
 
 # Các tính năng của Dự án
@@ -130,9 +164,9 @@ SUSAN-SHOP/
 Dự án sử dụng **JSON-Server** để giả lập Backend API. Vui lòng thực hiện đúng các bước sau để website hoạt động.
 
 ### Bước 1: Cài đặt môi trường
-Yêu cầu máy tính đã cài đặt **Node.js**. Sau đó mở Terminal/Command Prompt và cài `json-server`:
+Yêu cầu máy tính đã cài đặt **Node.js**. Sau đó mở Terminal/Command Prompt và cài json-server:
 
-npm install -g json-server
+`npm install -g json-server`
 
 ### Bước 2: Khởi động API Server
 Tại thư mục gốc của dự án (nơi chứa file db.json), mở Terminal và chạy lệnh:
