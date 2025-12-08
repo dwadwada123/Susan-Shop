@@ -177,4 +177,5 @@ Sử dụng Extension Live Server trên Visual Studio Code để mở file index
 
 ### Tài khoản dùng thử
 Admin: admin@susan.com | 123
+
 User: tranvuphong05@gmail.com | 123456
