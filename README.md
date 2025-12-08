@@ -2,14 +2,14 @@
 
 Dự án Website bán hàng Gaming Gear (Bàn phím, Chuột, Tai nghe...) được xây dựng bằng **Javascript thuần (Vanilla JS)**. Đây là sản phẩm Assignment môn **Lập trình JavaScript Nâng cao (WEB2064)**.
 
-## 👨‍💻 Thông tin sinh viên
+## Thông tin sinh viên
 * **Họ và tên:** Trần Vũ Phong
 * **Mã sinh viên:** PD11581
 * **Lớp:** MD20301
 
 ---
 
-## 🚀 Công nghệ sử dụng
+## Công nghệ sử dụng
 * **Frontend:** HTML5, CSS3, Javascript (ES6+).
 * **Backend (Giả lập):** JSON-Server (Mock API) để xử lý dữ liệu RESTful API.
 * **Xử lý bất đồng bộ:** Sử dụng `Fetch API`, `Async/Await`, `Promise.all`.
@@ -18,10 +18,10 @@ Dự án Website bán hàng Gaming Gear (Bàn phím, Chuột, Tai nghe...) đư�
 
 ---
 
-## 📂 Cấu trúc mã nguồn
+## Cấu trúc mã nguồn
 Dự án được tổ chức theo mô hình tách biệt (Separation of Concerns) để dễ dàng quản lý và bảo trì:
 
-```text
+
 SUSAN-SHOP/
 │
 ├── admin/                  # Giao diện trang quản trị (Admin)
