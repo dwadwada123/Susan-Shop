@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     renderCart();
+    const btnCheckout = document.getElementById('btn-checkout');
+    if (btnCheckout) {
+        btnCheckout.addEventListener('click', handleCheckout);
+    }
 });
 
 function renderCart() {
@@ -29,7 +33,7 @@ function renderCart() {
                     <img src="${item.image}" alt="${item.name}">
                     <div>
                         <h4>${item.name}</h4>
-                    </div>
+                        <span style="font-size: 12px; color: #888;">Còn lại trong kho: Đang tải...</span> </div>
                 </div>
             </td>
             <td>${formatCurrency(item.price)}</td>
@@ -48,9 +52,50 @@ function renderCart() {
             </td>
         `;
         container.appendChild(tr);
+        checkStockForDisplay(item.id, tr);
     });
 
     updateSummary(total);
+}
+
+async function checkStockForDisplay(productId, trElement) {
+    try {
+        const product = await get(`/products/${productId}`);
+        const span = trElement.querySelector('span[style*="font-size: 12px"]');
+        if (span) span.innerText = `Kho còn: ${product.stock}`;
+    } catch (e) {}
+}
+
+async function handleCheckout() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    if (cart.length === 0) {
+        alert('Giỏ hàng trống!');
+        return;
+    }
+
+    const user = JSON.parse(localStorage.getItem('user')) || JSON.parse(sessionStorage.getItem('user'));
+    if (!user) {
+        if(confirm('Bạn cần đăng nhập để thanh toán. Đi đến trang đăng nhập?')) {
+            window.location.href = 'login.html';
+        }
+        return;
+    }
+
+    try {
+        for (const item of cart) {
+            const product = await get(`/products/${item.id}`);
+            if (product.stock < item.quantity) {
+                alert(`Sản phẩm "${item.name}" hiện chỉ còn ${product.stock} cái. Vui lòng giảm số lượng!`);
+                return;
+            }
+        }
+        window.location.href = 'checkout.html';
+
+    } catch (error) {
+        console.error(error);
+        alert('Có lỗi kết nối, vui lòng thử lại.');
+    }
 }
 
 function changeQty(index, change) {

@@ -23,6 +23,7 @@
       "name": "Cyber Mech K2 Pro",
       "categoryId": 1,
       "price": 2500000,
+      "stock": 49,
       "image": "https://cdn.shopify.com/s/files/1/0608/5145/4022/files/k2-pro-13.webp?v=1728274436",
       "rating": 4.9,
       "detail": "Bàn phím cơ không dây cao cấp với đèn LED RGB 16.8 triệu màu, switch quang học siêu bền."
@@ -32,6 +33,7 @@
       "name": "Razer Viper Ultimate",
       "categoryId": 2,
       "price": 1850000,
+      "stock": 49,
       "image": "https://tanphat.com.vn/media/product/4190_37426_viper_ultimate_ha4.jpg",
       "rating": 5,
       "detail": "Chuột Gaming siêu nhẹ, cảm biến quang học chính xác, dock sạc đi kèm tiện lợi."
@@ -41,6 +43,7 @@
       "name": "AULA X25 RGB",
       "categoryId": 3,
       "price": 1200000,
+      "stock": 50,
       "image": "https://bossgear.net/wp-content/uploads/2024/04/hkkpklnx.png",
       "rating": 4.8,
       "detail": "Tai nghe chống ồn chủ động, âm bass cực mạnh, phù hợp cho cả nghe nhạc và chơi game."
@@ -50,6 +53,7 @@
       "name": "LG UltraGear 27inch",
       "categoryId": 4,
       "price": 8900000,
+      "stock": 50,
       "image": "https://laptopworld.vn/media/product/15306_46546_lg_ultragear_27gr75q_b__2_.jpg",
       "rating": 4.7,
       "detail": "Màn hình 144Hz, tấm nền IPS, hỗ trợ G-Sync tương thích, độ trễ 1ms."
@@ -59,24 +63,27 @@
       "name": "Keychron K6 Wireless",
       "categoryId": 1,
       "price": 1950000,
+      "stock": 50,
       "image": "https://cdn.shopify.com/s/files/1/0059/0630/1017/t/5/assets/keychronk6pr0qmkviawirelesscustommechanicalkeyboard-1659094228146.jpg?v=1659094230",
       "rating": 4.6,
       "detail": "Bàn phím layout 65% nhỏ gọn, pin trâu, hỗ trợ hotswap tiện lợi."
     },
     {
-      "id": "6",
       "name": "Logitech G Pro X",
-      "categoryId": 2,
       "price": 2100000,
+      "stock": 50,
       "image": "https://pcmarket.vn/media/product/9884_6209b1e3f12c0.png",
-      "rating": 4.9,
-      "detail": "Chuột được thiết kế cho E-sport chuyên nghiệp, form cầm đối xứng."
+      "categoryId": 2,
+      "detail": "Chuột được thiết kế cho E-sport chuyên nghiệp, form cầm đối xứng.",
+      "rating": 5,
+      "id": "6"
     },
     {
       "id": "7",
       "name": "SteelSeries Arctis 7",
       "categoryId": 3,
       "price": 3500000,
+      "stock": 50,
       "image": "https://product.hstatic.net/200000722513/product/black_5e083a4c49d04fadabf798c232690039_3abadc882950493caf9dc77c9b7e8767_master.jpg",
       "rating": 4.8,
       "detail": "Tai nghe không dây độ trễ thấp, chất âm cân bằng, mic khử ồn tốt."
@@ -86,6 +93,7 @@
       "name": "Asus TUF Gaming VG27",
       "categoryId": 4,
       "price": 6500000,
+      "stock": 50,
       "image": "https://www.asus.com/media/global/gallery/b5zp43irnuau4c6r_setting_xxx_0_90_end_2000.png",
       "rating": 4.5,
       "detail": "Màn hình cong 165Hz, hình ảnh sắc nét, chế độ bảo vệ mắt."
@@ -95,6 +103,7 @@
       "name": "Akko 3068B Plus",
       "categoryId": 1,
       "price": 1650000,
+      "stock": 50,
       "image": "https://akko.vn/wp-content/uploads/2022/11/ban-phim-co-akko-3068b-plus-blue-on-white-001.jpg",
       "rating": 4.7,
       "detail": "Bàn phím màu sắc cá tính, keycap PBT double-shot bền bỉ."
@@ -104,6 +113,7 @@
       "name": "Dareu EM908",
       "categoryId": 2,
       "price": 350000,
+      "stock": 50,
       "image": "https://bizweb.dktcdn.net/100/446/096/products/dareu-em908-gearvn.jpg?v=1643171572867",
       "rating": 4.3,
       "detail": "Chuột gaming giá rẻ, LED RGB, độ bền 50 triệu lần nhấn."
@@ -113,6 +123,7 @@
       "name": "Corsair HS70 Pro",
       "categoryId": 3,
       "price": 2200000,
+      "stock": 50,
       "image": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Gaming-Headsets/CA-9011211-NA/Gallery/HS70_PRO_CARBON_20.webp",
       "rating": 4.6,
       "detail": "Tai nghe giả lập âm thanh vòm 7.1, đệm tai êm ái."
@@ -122,6 +133,7 @@
       "name": "Samsung Odyssey G5",
       "categoryId": 4,
       "price": 7200000,
+      "stock": 50,
       "image": "https://cdn2.fptshop.com.vn/unsafe/800x0/man_hinh_samsung_odyssey_g5_ls27cg552eexxv_1_02b6248be9.jpg",
       "rating": 4.8,
       "detail": "Màn hình độ phân giải 2K, tần số quét 144Hz, HDR10."
@@ -131,6 +143,7 @@
       "name": "Leopold FC750R",
       "categoryId": 1,
       "price": 3100000,
+      "stock": 50,
       "image": "https://product.hstatic.net/200000722513/product/arvn-ban-phim-leopold-fc750r-bluetooth-white-green-silent-red-switch-1_2aa07699f5fb4f87b73be73803c10b1b_master.png",
       "rating": 5,
       "detail": "Bàn phím cơ build chắc chắn nhất phân khúc, cảm giác gõ tuyệt vời."
@@ -140,6 +153,7 @@
       "name": "Logitech G502 Hero",
       "categoryId": 2,
       "price": 990000,
+      "stock": 50,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqjUmQbdKGSCQz8OL41UM22-baxD5SCKJmQQ&s",
       "rating": 4.9,
       "detail": "Huyền thoại chuột gaming, có tạ tùy chỉnh trọng lượng."
@@ -149,6 +163,7 @@
       "name": "Sony Inzone H9",
       "categoryId": 3,
       "price": 6990000,
+      "stock": 50,
       "image": "https://cdn.tgdd.vn/Products/Images/54/327962/tai-nghe-bluetooth-gaming-sony-inzone-h9-wh-g900n-600x600.jpg",
       "rating": 4.9,
       "detail": "Tai nghe cao cấp của Sony, tối ưu cho PS5 và PC."
@@ -158,6 +173,7 @@
       "name": "Dell Alienware 25",
       "categoryId": 4,
       "price": 11500000,
+      "stock": 50,
       "image": "https://minhancomputercdn.com/media/product/10701_dell_allienware_25_aw2521h_10.jpg",
       "rating": 4.8,
       "detail": "Màn hình 360Hz siêu tốc độ cho game thủ FPS chuyên nghiệp."
@@ -167,6 +183,7 @@
       "name": "Vortex Tab 75",
       "categoryId": 1,
       "price": 2800000,
+      "stock": 50,
       "image": "https://product.hstatic.net/1000238589/product/ban_phim_co_vortex_tab_75_bluetooth_brown_switch_b377df0065204ea2bbf0d8c2f889f799_large.jpg",
       "rating": 4.6,
       "detail": "Bàn phím Bluetooth hỗ trợ đa thiết bị, keycap màu vintage."
@@ -176,6 +193,7 @@
       "name": "Zowie EC2-C",
       "categoryId": 2,
       "price": 1700000,
+      "stock": 50,
       "image": "https://image.benq.com/is/image/benqco/raised-front-end%20(1)?$ResponsivePreset$&fmt=png-alpha",
       "rating": 4.7,
       "detail": "Chuột thiết kế tối giản, tập trung vào hiệu năng thi đấu (Plug & Play)."
@@ -185,23 +203,25 @@
       "name": "HyperX Cloud Alpha",
       "categoryId": 3,
       "price": 1990000,
+      "stock": 50,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPhcXJvNxvX1GsA7ODDv62mRXbb2qDkHk0Yg&s",
       "rating": 4.8,
       "detail": "Tai nghe màng loa kép, âm thanh chi tiết, khung nhôm bền bỉ."
     },
     {
-      "id": "20",
       "name": "ViewSonic VX2428",
-      "categoryId": 4,
       "price": 3200000,
+      "stock": 50,
       "image": "https://product.hstatic.net/1000288298/product/80840_man_hinh_viewsonic_vx2428_180hz_4_54d3409e776a4cf5a3a1f4d7311942e3_master.jpg",
-      "rating": 4.5,
-      "detail": "Màn hình giá rẻ hiệu năng cao, 165Hz IPS."
+      "categoryId": 4,
+      "detail": "Màn hình giá rẻ hiệu năng cao, 165Hz IPS.",
+      "rating": 5,
+      "id": "20"
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Admin User",
       "email": "admin@gmail.com",
       "password": "123",
@@ -231,6 +251,42 @@
       "totalPrice": 10000000,
       "status": "completed",
       "createdDate": "2025-12-08"
+    },
+    {
+      "id": "0218",
+      "userId": null,
+      "customerName": "Trần Vũ Phong",
+      "email": "tranvuphong05@gmail.com",
+      "phone": "218381283",
+      "address": "1232141",
+      "note": "5432",
+      "totalPrice": 6400000,
+      "status": "pending",
+      "createdDate": "2025-12-09"
+    },
+    {
+      "id": "1e57",
+      "userId": null,
+      "customerName": "Trần Vũ Phong",
+      "email": "tranvuphong05@gmail.com",
+      "phone": "218381283",
+      "address": "1232141",
+      "note": "đưaă",
+      "totalPrice": 9600000,
+      "status": "pending",
+      "createdDate": "2025-12-09"
+    },
+    {
+      "id": "33d3",
+      "userId": null,
+      "customerName": "Trần Vũ Phong",
+      "email": "tranvuphong05@gmail.com",
+      "phone": "218381283",
+      "address": "1232141",
+      "note": "đă",
+      "totalPrice": 4350000,
+      "status": "pending",
+      "createdDate": "2025-12-09"
     }
   ],
   "order_details": [
@@ -240,6 +296,38 @@
       "productId": "1",
       "productName": "Cyber Mech K2 Pro",
       "quantity": 4,
+      "unitPrice": 2500000
+    },
+    {
+      "id": "15fc",
+      "orderId": "0218",
+      "productId": "20",
+      "productName": "ViewSonic VX2428",
+      "quantity": 2,
+      "unitPrice": 3200000
+    },
+    {
+      "id": "226b",
+      "orderId": "1e57",
+      "productId": "20",
+      "productName": "ViewSonic VX2428",
+      "quantity": 3,
+      "unitPrice": 3200000
+    },
+    {
+      "id": "4463",
+      "orderId": "33d3",
+      "productId": "2",
+      "productName": "Razer Viper Ultimate",
+      "quantity": 1,
+      "unitPrice": 1850000
+    },
+    {
+      "id": "d292",
+      "orderId": "33d3",
+      "productId": "1",
+      "productName": "Cyber Mech K2 Pro",
+      "quantity": 1,
       "unitPrice": 2500000
     }
   ]

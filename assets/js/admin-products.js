@@ -3,6 +3,7 @@ let categories = [];
 document.addEventListener("DOMContentLoaded", async () => {
     await loadCategories();
     await loadProducts();
+    
     const form = document.getElementById('product-form');
     if(form) form.addEventListener('submit', handleSaveProduct);
 });
@@ -25,6 +26,13 @@ async function loadProducts() {
         const catName = categories.find(c => c.id == p.categoryId)?.name || 'Khác';
         const dataStr = JSON.stringify(p).replace(/"/g, '&quot;');
 
+        let stockHtml = `<span style="font-weight:bold; color: #10b981;">${p.stock}</span>`;
+        if (p.stock === 0) {
+            stockHtml = `<span style="font-weight:bold; color: #ef4444;">Hết hàng</span>`;
+        } else if (p.stock < 10) {
+            stockHtml = `<span style="font-weight:bold; color: #f59e0b;">${p.stock} (Sắp hết)</span>`;
+        }
+
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>#${p.id}</td>
@@ -32,7 +40,7 @@ async function loadProducts() {
             <td>${p.name}</td>
             <td>${catName}</td>
             <td>${formatCurrency(p.price)}</td>
-            <td class="action-btns">
+            <td>${stockHtml}</td> <td class="action-btns">
                 <button class="btn-edit" onclick="openModal(${dataStr})"><i class="fa-solid fa-pen"></i></button>
                 <button class="btn-delete" onclick="deleteProduct(${p.id})"><i class="fa-solid fa-trash"></i></button>
             </td>
@@ -50,6 +58,7 @@ function openModal(product = null) {
         document.getElementById('prod-id').value = product.id;
         document.getElementById('prod-name').value = product.name;
         document.getElementById('prod-price').value = product.price;
+        document.getElementById('prod-stock').value = product.stock;
         document.getElementById('prod-image').value = product.image;
         document.getElementById('prod-detail').value = product.detail || '';
         document.getElementById('prod-category').value = product.categoryId;
@@ -57,6 +66,7 @@ function openModal(product = null) {
         title.innerText = 'Thêm sản phẩm mới';
         document.getElementById('product-form').reset();
         document.getElementById('prod-id').value = '';
+        document.getElementById('prod-stock').value = 50;
     }
     
     modal.classList.add('active');
@@ -69,9 +79,11 @@ function closeModal() {
 async function handleSaveProduct(e) {
     e.preventDefault();
     const id = document.getElementById('prod-id').value;
+    
     const data = {
         name: document.getElementById('prod-name').value,
         price: Number(document.getElementById('prod-price').value),
+        stock: Number(document.getElementById('prod-stock').value),
         image: document.getElementById('prod-image').value,
         categoryId: Number(document.getElementById('prod-category').value),
         detail: document.getElementById('prod-detail').value,

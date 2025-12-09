@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.getElementById('order-items-list');
     let total = 0;
-
     cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
@@ -17,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         div.innerHTML = `<span>${item.name} (x${item.quantity})</span><span>${formatCurrency(itemTotal)}</span>`;
         container.appendChild(div);
     });
-
     document.getElementById('order-total').innerText = formatCurrency(total);
-    const user = JSON.parse(localStorage.getItem('user'));
+
+    const user = getCurrentUser(); 
     if (user) {
         document.getElementById('bill-name').value = user.name || '';
         document.getElementById('bill-email').value = user.email || '';
@@ -29,6 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById('checkout-form').addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        try {
+            for (const item of cart) {
+                const product = await get(`/products/${item.id}`);
+                if (product.stock < item.quantity) {
+                    alert(`Sản phẩm "${item.name}" chỉ còn ${product.stock} cái trong kho. Vui lòng giảm số lượng!`);
+                    return;
+                }
+            }
+        } catch (err) {
+            alert('Lỗi kiểm tra tồn kho.');
+            return;
+        }
 
         const newOrder = {
             userId: user ? user.id : null,
@@ -48,9 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newOrder)
             });
-
             const createdOrder = await orderRes.json();
-            const detailPromises = cart.map(item => {
+
+            const tasks = cart.map(async (item) => {
                 const detail = {
                     orderId: createdOrder.id,
                     productId: item.id,
@@ -58,14 +70,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     quantity: item.quantity,
                     unitPrice: item.price
                 };
-                return fetch(`${API_URL}/order_details`, {
+                await fetch(`${API_URL}/order_details`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(detail)
                 });
+
+                const currentProduct = await get(`/products/${item.id}`);
+                const newStock = currentProduct.stock - item.quantity;
+                
+                await fetch(`${API_URL}/products/${item.id}`, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ stock: newStock })
+                });
             });
 
-            await Promise.all(detailPromises);
+            await Promise.all(tasks);
+
             localStorage.removeItem('cart');
             window.location.href = `thankyou.html?id=${createdOrder.id}`;
 
